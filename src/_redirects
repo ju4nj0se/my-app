@@ -1,5 +1,1 @@
-# This rule will trigger at /blog/my-old-title
-https://idyllic-lokum-000045.netlify.app/users   https://idyllic-lokum-000045.netlify.app/users
-
-# This rule will never trigger because the previous rule triggers first
-https://idyllic-lokum-000045.netlify.app/users   https://idyllic-lokum-000045.netlify.app/users
+/*    /index.html    200
