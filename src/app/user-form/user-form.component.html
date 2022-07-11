@@ -2,27 +2,85 @@
     <div class="card-body">
       <form (ngSubmit)="onSubmit()" #userForm="ngForm">
         <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" [(ngModel)]="user.name" 
+          <label for="name">Nombres</label>
+          <input type="text" [(ngModel)]="user.nombres" 
             class="form-control" 
-            id="name" 
-            name="name" 
-            placeholder="Enter your name"
+            id="nombres" 
+            name="nombres" 
+            placeholder="Enter your Nombres"
             required #name="ngModel">
         </div>
-        <div [hidden]="!name.pristine" class="alert alert-danger">Name is required</div>
+        <div [hidden]="!name.pristine" class="alert alert-danger">Nombres is required</div>
         <div class="form-group">
-          <label for="email">Email</label>
-          <input type="text" [(ngModel)]="user.email" 
+          <label for="apellidos">Apellidos</label>
+          <input type="text" [(ngModel)]="user.apellidos" 
             class="form-control" 
-            id="email" 
-            name="email" 
-            placeholder="Enter your email address"
+            id="apellidos" 
+            name="apellidos" 
+            placeholder="Enter your apellidos"
             required #email="ngModel">
-          <div [hidden]="!email.pristine" class="alert alert-danger">Email is required</div>
+          <div [hidden]="!email.pristine" class="alert alert-danger">apellidos is required</div>
         </div>
+        <div class="form-group">
+          <label for="genero">Genero</label>
+          <input type="text" [(ngModel)]="user.genero" 
+            class="form-control" 
+            id="genero" 
+            name="genero" 
+            placeholder="Enter your genero"
+            required #name="ngModel">
+        </div>
+        <div [hidden]="!name.pristine" class="alert alert-danger">genero is required</div>
+        <div class="form-group">
+          <label for="tipoDocumento">tipoDocumento</label>
+          <input type="text" [(ngModel)]="user.tipoDocumento" 
+            class="form-control" 
+            id="tipoDocumento" 
+            name="tipoDocumento" 
+            placeholder="Enter your tipoDocumento "
+            required #email="ngModel">
+          <div [hidden]="!email.pristine" class="alert alert-danger">tipoDocumento is required</div>
+        </div>
+        <div class="form-group">
+          <label for="categoria">categoria</label>
+          <input type="text" [(ngModel)]="user.categoria" 
+            class="form-control" 
+            id="categoria" 
+            name="categoria" 
+            placeholder="Enter your categoria"
+            required #name="ngModel">
+        </div>
+        <div [hidden]="!name.pristine" class="alert alert-danger">categoria is required</div>
+         
+
+         
+        <div class="form-group">
+        <label for="Sede">Sede</label>
+        </div>
+       <!-- <select [(ngModel)]="user.sedeLis">
+          <option *ngFor="let title of players">
+            {{title}}
+          </option>
+      </select> -->
+ 
+   
+       
+
+
+
+         
+
+
+     
+
+
         <button type="submit" [disabled]="!userForm.form.valid" 
           class="btn btn-info">Submit</button>
+
+
+
+          
+          
       </form>
     </div>
   </div>
