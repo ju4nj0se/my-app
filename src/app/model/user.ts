@@ -7,8 +7,7 @@ export class User {
     apellidos!: string; 
     genero!: string; 
     categoria!: string;
-    sedeLis?: string[];
-
+  
 
    
 }

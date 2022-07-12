@@ -23,6 +23,9 @@ export class UserListComponent implements OnInit {
       this.users = data;
     });
      
+
+
+    
     this.userService.findAllSede().subscribe(data => {
       this.sede = data;
       

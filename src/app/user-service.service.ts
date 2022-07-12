@@ -10,16 +10,16 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class UserService {
 
- // private baseUrl: String;
+  private baseUrl: String;
   private usersUrl: string;
 
   private sedeUrl: string;
 
 
   constructor(private http: HttpClient) { 
-    //this.baseUrl = 'http://localhost:8080/api/';
-    this.usersUrl = 'http://localhost:8080/api/participantes';
-    this.sedeUrl = 'http://localhost:8080/api/sede';
+    this.baseUrl = 'http://localhost:8080/api/';
+    this.usersUrl = this.baseUrl + 'participantes';
+    this.sedeUrl = this.baseUrl + 'sede';
   }
 
   public findAll(): Observable<User[]> {

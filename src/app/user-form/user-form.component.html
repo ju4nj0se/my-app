@@ -54,15 +54,16 @@
          
 
          
+         
         <div class="form-group">
-        <label for="Sede">Sede</label>
-        </div>
-       <!-- <select [(ngModel)]="user.sedeLis">
-          <option *ngFor="let title of players">
-            {{title}}
-          </option>
-      </select> -->
- 
+          <label>Sede: </label>
+          <mat-form-field (click)="getSede()" class="form-control" appearance="fill" >
+            <mat-select name="sede" placeholder="Seleccione" [(ngModel)]="sede.sedeNombre" (selectionChange)="onChangeS($event)" required>
+              <mat-option *ngIf="!sedeList" #allSelected [value]="sede.sedeNombre">{{ sede.sedeNombre }}</mat-option>
+              <mat-option #allSelected   *ngFor="let m of sedeList" [value]="m">{{ m.sedeNombre }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          </div>
    
        
 
